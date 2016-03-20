@@ -3,6 +3,7 @@
 namespace WikidataSearch\Console;
 
 use WikibaseDumpProcessor\Services;
+use WikidataSearch\Console\Commands\BuildMappingCommand;
 use WikidataSearch\Console\Commands\ProcessDumpCommand;
 
 class CommandRegistry {
@@ -15,6 +16,7 @@ class CommandRegistry {
 
 	public function getCommands() {
 		$commands = array(
+			new BuildMappingCommand(),
 			$this->newProcessDumpCommand()
 		);
 
